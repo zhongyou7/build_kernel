@@ -5,7 +5,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v2
       - name: set up JDK 1.8
@@ -20,7 +20,7 @@ jobs:
       - name: pull kernel and complier
         run: |
           echo "拉取源码和编译器"
-          git clone --depth=1 https://github.com/guh0613/android_kernel_oppo_sm8150  #修改内核源码地址和分支名称
+          git clone --depth=1 -b nethunter-11.0 https://github.com/zhongyou7/nethunter_kernel_oneplus_sdm845-2  #修改内核源码地址和分支名称
           echo "拉取源码完成"
           git clone --depth=1 https://github.com/kdrag0n/proton-clang -b master
           echo "拉取编译器完成"
