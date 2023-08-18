@@ -46,9 +46,9 @@ clean(){
 
 
 build_kernel(){
-	export KBUILD_BUILD_USER="zahi0"  
-	export KBUILD_BUILD_HOST="zahi0-server"  
-	make $args wayne_defconfig #修改配置文件
+	export KBUILD_BUILD_USER="Asamo"  
+	export KBUILD_BUILD_HOST="Asamo-server"  
+	make $args op6-perf_defconfig #修改配置文件
 	if [ $? -ne 0 ]; then
       		exit 0
         fi
